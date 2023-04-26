@@ -13,8 +13,8 @@ namespace WinFormsApp1
 
             try
             {
-                var response = await SendGetRequestAsync(endpoint); // SendGetRequestAsync adında bir metod oluşturuyoruz.
-                textBox1.Text = response; // gelen response u textbox'a yazdırıyoruz.
+                var response = await SendGetRequestAsync(endpoint); // SendGetRequestAsync adÃ½nda bir metod oluÃ¾turuyoruz.
+                textBox1.Text = response; // gelen response u textbox'a yazdÃ½rÃ½yoruz.
             }
             catch (Exception ex)
             {
@@ -25,9 +25,9 @@ namespace WinFormsApp1
         {
             using (var client = new HttpClient())
             {
-                var respone = await client.GetAsync(endpoint); // buradaki getAsync, metod ismidir postta postAsync, putta putAsync kullanılır. ve endpoint urlimizi gönderiyoruz.
-                var responseContent = await respone.Content.ReadAsStringAsync(); // gelen cevabın içeriğini response content değişkenine atıyoruz.
-                return responseContent; // ve contenti geriye göndürüyoruz 
+                var response = await client.GetAsync(endpoint); // buradaki getAsync, metod ismidir postta postAsync, putta putAsync kullanÃ½lÃ½r. ve endpoint urlimizi gÃ¶nderiyoruz.
+                var responseContent = await response.Content.ReadAsStringAsync(); // gelen cevabÃ½n iÃ§eriÃ°ini response content deÃ°iÃ¾kenine atÃ½yoruz.
+                return responseContent; // ve contenti geriye gÃ¶ndÃ¼rÃ¼yoruz 
             }
         }
     }
